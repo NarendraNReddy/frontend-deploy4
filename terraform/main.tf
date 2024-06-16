@@ -170,7 +170,8 @@ resource "aws_lb_listener_rule" "frontend" {
 
   condition {
     host_header {
-      values = ["web.app-${var.environment}.${var.zone_name}"]
+      #values = ["web.app-${var.environment}.${var.zone_name}"]
+      values = ["web-${var.environment}.${var.zone_name}"]
     }
   }
 }
